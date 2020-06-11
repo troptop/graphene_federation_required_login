@@ -2,7 +2,7 @@
 from . import exceptions
 from functools import wraps
 from django.conf import settings
-from .apps import DEFAULT_GRFL_DJANGO_CONTEXT , SETTINGS_GRFL_DJANGO_CONTEXT_ATTRIBUTE
+from .apps import (DEFAULT_GRFL_DJANGO_CONTEXT , SETTINGS_GRFL_DJANGO_CONTEXT_ATTRIBUTE)
 
 def required_federation_login(_func=None, *, header=getattr(settings,SETTINGS_GRFL_DJANGO_CONTEXT_ATTRIBUTE,DEFAULT_GRFL_DJANGO_CONTEXT)):
     def decorator(view_func):
