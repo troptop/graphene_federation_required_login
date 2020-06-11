@@ -1,6 +1,6 @@
 import json
 from django.conf import settings
-from .app import DEFAULT_GRFL_DJANGO_CONTEXT , DEFAULT_GRFL_FEDERATION_HEADER ,
+from .apps import DEFAULT_GRFL_DJANGO_CONTEXT , DEFAULT_GRFL_FEDERATION_HEADER ,
 SETTINGS_GRFL_FEDERATION_HEADER_ATTRIBUTE , SETTINGS_GRFL_DJANGO_CONTEXT_ATTRIBUTE
 import logging
 logger = logging.getLogger(__name__)
