@@ -17,5 +17,5 @@ class AuthorizationMiddleware(object):
         if grfl_federation_header in info.context.headers:
             setattr(info.context, grfl_django_context, json.loads(info.context.headers[grfl_federation_header]))
             logger.error('-------  MIDDLEWARE ------- {}'.format(dir(info.context)))
-            logger.error('-------  MIDDLEWARE ------- {}'.format(info.context.__dict__[grfl_federation_header]))
+            logger.error('-------  MIDDLEWARE ------- {}'.format(info.context.__dict__[grfl_django_context]))
         return next(root, info, **kwargs)
