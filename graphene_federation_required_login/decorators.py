@@ -1,8 +1,9 @@
 
 from . import exceptions
 from functools import wraps
+from django.conf import settings
 
-def required_federation_login(_func=None, *, header='gateway'):
+def required_federation_login(_func=None, *, header=settings.GRAPHENE_FEDERATION_HEADER):
     def decorator(view_func):
         @wraps(view_func)
         def _wrapped_view(self, info, **kwargs):
