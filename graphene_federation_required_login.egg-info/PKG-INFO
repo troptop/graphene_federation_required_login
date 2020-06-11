@@ -2,9 +2,9 @@ Metadata-Version: 1.1
 Name: graphene-federation-required-login
 Version: 0.1
 Summary: Required Login Decoration for Graphene Federation.
-Home-page: https://www.example.com/
-Author: Your Name
-Author-email: yourname@example.com
+Home-page: https://github.com/troptop/graphene_federation_required_login.git
+Author: cyaymwm
+Author-email: cyaymwm@gmail.com
 License: BSD-3-Clause  # Example license
 Description: =====
         Polls

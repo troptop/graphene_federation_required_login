@@ -8,6 +8,7 @@ graphene_federation_required_login/admin.py
 graphene_federation_required_login/apps.py
 graphene_federation_required_login/decorators.py
 graphene_federation_required_login/exceptions.py
+graphene_federation_required_login/middleware.py
 graphene_federation_required_login/models.py
 graphene_federation_required_login/tests.py
 graphene_federation_required_login/views.py
