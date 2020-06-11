@@ -14,4 +14,5 @@ class AuthorizationMiddleware(object):
         if _GRAPHENE_FEDERATION_HEADER in info.context.headers:
             setattr(info.context, _GRAPHENE_FEDERATION_HEADER, json.loads(info.context.headers[_GRAPHENE_FEDERATION_HEADER]))
             logger.error('-------  MIDDLEWARE ------- {}'.format(dir(info.context)))
+            logger.error('-------  MIDDLEWARE ------- {}'.format(info.context.__dict__[_GRAPHENE_FEDERATION_HEADER]))
         return next(root, info, **kwargs)
