@@ -16,5 +16,5 @@ class AuthorizationMiddleware(object):
             #logger.error('-------  USER ------- {}'.format(info.context.headers['user']))
             setattr(info.context, _GRAPHENE_FEDERATION_HEADER, json.loads(info.context.headers[_GRAPHENE_FEDERATION_HEADER]))
         if settings.DEBUG:
-            logger.error('graphene_federation_required_login - middleware : {}'.format(getattr(info.context,_GRAPHENE_FEDERATION_HEADER))        
+            logger.error('graphene_federation_required_login - middleware : {}'.format(getattr(info.context,_GRAPHENE_FEDERATION_HEADER)))        
         return next(root, info, **kwargs)
