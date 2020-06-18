@@ -15,9 +15,9 @@ def required_federation_login(_func=None, *, header=getattr(settings,SETTINGS_GF
     def decorator(view_func):
         @wraps(view_func)
         @context(view_func)
-        def _wrapped_view(self, info, **kwargs):
+        def _wrapped_view(info, *args, **kwargs):
             if hasattr(info.context,header) and getattr(info.context,header):
-                return view_func(self, info, **kwargs)
+                return view_func(*args, **kwargs)
             raise exceptions.PermissionDenied()
         return _wrapped_view
     if _func is None:
